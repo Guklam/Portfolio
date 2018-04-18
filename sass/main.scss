@@ -28,48 +28,50 @@ body {
 /* ----------------------------------------------- */
 
 #main-page {
- background: $midnight;
+    background: $midnight;
+    height: 100vh;
+    position: relative;
+    & .main-element {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+        border-radius: 50%;
+        text-align: center;
+        word-wrap: break-word;
+        & > * {
+            color: $white;
+            position: relative;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -27%);
+        }
+        & h1.main-text {
+            font-size: 52px;
+            font-weight: 100;
+            border-bottom: 1px solid $white;
+            font-family: 'Roboto', 'Lato', 'Open sans', Sans-serif;
+        }
+        & p.main-text-work {
+            font-size: 33px;
+            font-family: 'Lato';
+        }
+    }
+    & .arrow-icon {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        font-size: 50px;
+        & svg {
+            color: $red;
+            animation: 2s bounce infinite;
+            transition: 1s;
+        }
+    }
 }
-#main-page, #me {
- height: 100vh;
+#me {
  position: relative;
-}
-#main-page .main-element {
- position: absolute;
- top: 50%;
- left: 50%;
- transform: translate(-50%, -80%);
- border-radius: 50%;
- text-align: center;
- word-wrap: break-word;
-}
-#main-page .main-element > * {
- color: $white;
- position: relative;
- top: 27%;
- left: 50%;
- transform: translate(-50%, -27%);
-}
-#main-page .main-element h1.main-text {
- font-size: 52px;
- font-weight: 100;
- border-bottom: 1px solid $white;
- font-family: 'Roboto', 'Lato', 'Open sans', Sans-serif;
-}
-#main-page .main-element p.main-text-work {
- font-size: 33px;
- font-family: 'Lato';
-}
-#main-page .arrow-icon {
- position: absolute;
- bottom: 30px;
- left: 50%;
- font-size: 50px;
-}
-#main-page .arrow-icon svg {
- color: $red;
- animation: 2s bounce infinite;
- transition: 1s;
+ height: auto;
 }
 .main .bg-main:nth-child(2n+1) {
  background: $black;
@@ -91,7 +93,21 @@ body {
  }
 }
 
-/* Aniimation opacity */
+/* Animation opacity */
+
+/*$class-slug: 0 !default;
+$test : 20 !default;
+
+@keyframes opacity {
+    @for $i from 1 through 6 {
+      $class-slug = 0;
+      $test = 20;
+        {$class-slug+20}% {
+            opacity: 0,$test;
+        }
+    }
+}*/
+
 @keyframes opacity {
  0% {
   opacity: 0;
@@ -326,9 +342,6 @@ body {
 /*  Page des compétences
 /* ----------------------------------------------- */
 
-#me {
-  height: auto;
-}
 .main-me {
   	width: 80%;
   	margin-right: auto;

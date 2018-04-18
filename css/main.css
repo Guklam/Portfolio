@@ -19,9 +19,6 @@ body {
 /* ----------------------------------------------- */
 #main-page {
 	background: #34495e;
-}
-
-#main-page, #me {
 	height: 100vh;
 	position: relative;
 }
@@ -69,6 +66,11 @@ body {
 	transition: 1s;
 }
 
+#me {
+	position: relative;
+	height: auto;
+}
+
 .main .bg-main:nth-child(2n+1) {
 	background: #232323;
 }
@@ -89,7 +91,19 @@ body {
 	}
 }
 
-/* Aniimation opacity */
+/* Animation opacity */
+/*$class-slug: 0 !default;
+$test : 20 !default;
+
+@keyframes opacity {
+    @for $i from 1 through 6 {
+      $class-slug = 0;
+      $test = 20;
+        {$class-slug+20}% {
+            opacity: 0,$test;
+        }
+    }
+}*/
 @keyframes opacity {
 	0% {
 		opacity: 0;
@@ -351,10 +365,6 @@ body {
 /* ----------------------------------------------- */
 /*  Page des compétences
 /* ----------------------------------------------- */
-#me {
-	height: auto;
-}
-
 .main-me {
 	width: 80%;
 	margin-right: auto;
