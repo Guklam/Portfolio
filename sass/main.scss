@@ -460,21 +460,19 @@ body {
   			color: $white;
   			padding-top: 50px;
 		}
-		& a:not(:last-child) {
-			padding-right: 30px;
-			& svg {
-  				font-size: 36px;
-  			}
-		}
-		& a svg {
-  			transition: 0.3s;
-		}
 		& a {
+            & svg {
+                transition: 0.3s;
+                font-size: 36px;
+            }
 			&:hover {
 				& svg {
 					color: $white;
-				}
+                }
 			}
+            &:not(:last-child) {
+                padding-right: 30px;
+            }
 		}
 	}
 }
@@ -488,18 +486,20 @@ body {
 
 /* Icons */
 
-a svg[data-icon="facebook-f"] {
-  color: #3b5998;
-}
-a svg[data-icon="twitter"] {
-  color: #1da1f2;
-}
-a svg[data-icon="instagram"] {
-  color: #c13584;
-}
-a svg[data-icon="linkedin"] {
-  color: #0077b5;
-}
-a svg[data-icon="github"] {
-  color: #4078c0;
+a {
+    & svg[data-icon="facebook-f"] {
+        color: #3b5998;
+    }
+    & svg[data-icon="twitter"] {
+        color: #1da1f2;
+    }
+    & svg[data-icon="instagram"] {
+        color: #c13584;
+    }
+    & svg[data-icon="linkedin"] {
+        color: #0077b5;
+    }
+    & svg[data-icon="github"] {
+        color: #4078c0;
+    }
 }
