@@ -1,7 +1,5 @@
 # Documentation
 
-Création d'un portfolio pour le BTS SIO option SLAM
-
 ## Constantes
 
 Les constantes pour le titre etc. sont contenus dans le fichier *includes/const_html.php*
