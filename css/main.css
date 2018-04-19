@@ -7,6 +7,7 @@
 /*  Général
 /* ----------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto:500|Slabo+27px");
+@import url("btn.css");
 body {
 	margin: 0;
 	padding: 0;
@@ -91,19 +92,6 @@ body {
 	}
 }
 
-/* Animation opacity */
-/*$class-slug: 0 !default;
-$test : 20 !default;
-
-@keyframes opacity {
-    @for $i from 1 through 6 {
-      $class-slug = 0;
-      $test = 20;
-        {$class-slug+20}% {
-            opacity: 0,$test;
-        }
-    }
-}*/
 @keyframes opacity {
 	0% {
 		opacity: 0;
@@ -171,6 +159,25 @@ $test : 20 !default;
 	margin-top: 14px;
 }
 
+#nav-icon.animate-icon span:nth-child(1) {
+	top: 18px;
+	-webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+	background: #e74c3c;
+}
+
+#nav-icon.animate-icon span:nth-child(2) {
+	opacity: 0;
+	left: -60px;
+}
+
+#nav-icon.animate-icon span:nth-child(3) {
+	top: 18px;
+	-webkit-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+	background: #e74c3c;
+}
+
 #nav-icon span {
 	position: absolute;
 	display: block;
@@ -196,25 +203,6 @@ $test : 20 !default;
 
 #nav-icon span:nth-child(3) {
 	top: 36px;
-}
-
-#nav-icon span.animate-icon span:nth-child(1) {
-	top: 18px;
-	-webkit-transform: rotate(135deg);
-	transform: rotate(135deg);
-	background: #e74c3c;
-}
-
-#nav-icon span.animate-icon span:nth-child(2) {
-	opacity: 0;
-	left: -60px;
-}
-
-#nav-icon span.animate-icon span:nth-child(3) {
-	top: 18px;
-	-webkit-transform: rotate(-135deg);
-	transform: rotate(-135deg);
-	background: #e74c3c;
 }
 
 #overlay {
@@ -417,7 +405,7 @@ $test : 20 !default;
 	padding-bottom: 100px;
 }
 
-#works .grid-items {
+#works .grid-wrapper .grid-items {
 	clear: none;
 	text-align: inherit;
 	width: 32%;
@@ -426,12 +414,12 @@ $test : 20 !default;
 	display: inline-block;
 }
 
-#works .grid-items img {
+#works .grid-wrapper .grid-items img {
 	width: 100%;
 	height: auto;
 }
 
-#works .grid-items:nth-child(-n+3) {
+#works .grid-wrapper .grid-items:nth-child(-n+3) {
 	margin-top: 100px;
 }
 
@@ -450,6 +438,10 @@ $test : 20 !default;
 	margin-bottom: 60px;
 }
 
+#contact .form-contact h2 {
+	letter-spacing: 1px;
+}
+
 #contact .form-contact * {
 	display: block;
 	margin-bottom: 40px;
@@ -457,8 +449,10 @@ $test : 20 !default;
 
 #contact .form-contact input, #contact .form-contact textarea {
 	padding: 15px;
-	border: none;
-	border-bottom: 2px solid var(--silver);
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-bottom: 2px solid #bdc3c7;
 	transition: 0.3s;
 }
 
@@ -507,6 +501,7 @@ $test : 20 !default;
 	font-size: 25px;
 	color: #F0EEEE;
 	padding-top: 50px;
+	letter-spacing: 1px;
 }
 
 #footer .icon-social a svg {

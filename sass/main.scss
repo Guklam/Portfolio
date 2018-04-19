@@ -3,12 +3,12 @@
 /*  Création: 12/03/18
 /* ----------------------------------------------- */
 
-
 /* ----------------------------------------------- */
 /*  Général
 /* ----------------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto:500|Slabo+27px');
+@import url('btn.css');
 
 $white: #F0EEEE;
 $silver: #bdc3c7;
@@ -31,7 +31,7 @@ body {
     background: $midnight;
     height: 100vh;
     position: relative;
-    & .main-element {
+    .main-element {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -39,30 +39,30 @@ body {
         border-radius: 50%;
         text-align: center;
         word-wrap: break-word;
-        & > * {
+        > * {
             color: $white;
             position: relative;
             top: 27%;
             left: 50%;
             transform: translate(-50%, -27%);
         }
-        & h1.main-text {
+        h1.main-text {
             font-size: 52px;
             font-weight: 100;
             border-bottom: 1px solid $white;
             font-family: 'Roboto', 'Lato', 'Open sans', Sans-serif;
         }
-        & p.main-text-work {
+        p.main-text-work {
             font-size: 33px;
             font-family: 'Lato';
         }
     }
-    & .arrow-icon {
+    .arrow-icon {
         position: absolute;
         bottom: 30px;
         left: 50%;
         font-size: 50px;
-        & svg {
+        svg {
             color: $red;
             animation: 2s bounce infinite;
             transition: 1s;
@@ -92,21 +92,6 @@ body {
   transform: translateY(-20px);
  }
 }
-
-/* Animation opacity */
-
-/*$class-slug: 0 !default;
-$test : 20 !default;
-
-@keyframes opacity {
-    @for $i from 1 through 6 {
-      $class-slug = 0;
-      $test = 20;
-        {$class-slug+20}% {
-            opacity: 0,$test;
-        }
-    }
-}*/
 
 @keyframes opacity {
  0% {
@@ -149,7 +134,7 @@ $test : 20 !default;
   opacity: 0;
   transition: .5s ease;
   background-color: $midnight;
-  & .text {
+  .text {
     color: white;
     font-size: 20px;
     position: absolute;
@@ -170,7 +155,27 @@ $test : 20 !default;
   transition: 0.5s linear;
   float: right;
   margin-top: 14px;
-  & span {
+  &.animate-icon {
+    span {
+      &:nth-child(1) {
+        top: 18px;
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        background: $red;
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+      }
+      &:nth-child(3) {
+        top: 18px;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background: $red;
+      }
+    }
+  }
+  span {
     position: absolute;
     display: block;
     width: 100%;
@@ -192,26 +197,6 @@ $test : 20 !default;
     &:nth-child(3) {
       top: 36px;
     }
-    &.animate-icon {
-      & span {
-        &:nth-child(1) {
-          top: 18px;
-          -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-          background: $red;
-        }
-        &:nth-child(2) {
-          opacity: 0;
-          left: -60px;
-        }
-        &:nth-child(3) {
-          top: 18px;
-          -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-          background: $red;
-        }
-      }
-    }
   }
 }
 #overlay {
@@ -225,13 +210,13 @@ $test : 20 !default;
   width: 100%;
   height: 100%;
   background: #34495efa;
-  & ul {
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
     color: white;
     text-align: center;
-    & li {
+    li {
       display: block;
       padding: 4px 20px 13px 27px;
       font-weight: 600;
@@ -254,13 +239,13 @@ $test : 20 !default;
       &:hover::after {
         width: 100%;
       }
-      & a {
+      a {
         text-decoration: none;
         color: $white;
       }
     }
   }
-  & div {
+  div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -279,15 +264,15 @@ $test : 20 !default;
   width: 90%;
   margin-right: auto;
   margin-left: auto;
-  & a.logo {
+  a.logo {
     color: $white;
     text-decoration: none;
     font-size: 25px;
     line-height: 55px;
     transition: 0.5s linear;
-    & svg[data-icon="code"] {
+    svg[data-icon="code"] {
       color: $red;
-    }
+  }
   }
   &.fixed {
     position: fixed;
@@ -296,14 +281,14 @@ $test : 20 !default;
     width: 100%;
     z-index: 1;
     background: #34495efa !important;
-    & #nav-icon {
+    #nav-icon {
       margin-right: 10%;
       margin-top: 8px;
     }
-    & a.logo {
+    a.logo {
       margin-left: 10%;
     }
-    & svg[data-icon="code"] {
+    svg[data-icon="code"] {
       color: $white;
     }
   }
@@ -318,11 +303,11 @@ $test : 20 !default;
       display: block;
       animation: 1s opacity;
   }
-  & .arrow-up a {
+  .arrow-up a {
       color: $red;
       text-decoration: none;
       font-size: 30px;
-      & svg {
+      svg {
         transition: 0.4s;
     }
     &:hover svg {
@@ -352,23 +337,23 @@ $test : 20 !default;
     margin-left: auto;
     text-align: center;
     padding-bottom: 95px;
-    & h3 {
+    h3 {
       padding-top: 95px;
       color: $midnight;
       font-size: 30px;
       margin: 0;
   }
-  & .block-me {
+  .block-me {
       margin-top: 20px;
       display: inline-block;
       width: 33%;
-      & svg {
+      svg {
         color: $red;
         font-size: 35px;
         margin-top: 60px;
         margin-bottom: 25px;
     }
-    & p {
+    p {
         text-align: justify;
         margin-left: 30px;
         margin-right: 30px;
@@ -384,7 +369,7 @@ $test : 20 !default;
 /* ----------------------------------------------- */
 
 #works { 
-  & .grid-wrapper {
+  .grid-wrapper {
     position: relative;
     width: auto;
     max-width: 78vw;
@@ -395,20 +380,20 @@ $test : 20 !default;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 100px;
-  }
-  & .grid-items {
+      .grid-items {
       clear: none;
       text-align: inherit;
       width: 32%;
       margin-left: 8px;
       margin-bottom: 8px;
       display: inline-block;
-      & img {
-      width: 100%;
-      height: auto;
-    }
-    &:nth-child(-n+3) {
-      margin-top: 100px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &:nth-child(-n+3) {
+        margin-top: 100px;
+      }
     }
   }
 }
@@ -420,46 +405,51 @@ $test : 20 !default;
 
 #contact {
   text-align: center;
-  & .form-contact {
+  .form-contact {
     margin-right: auto;
     margin-left: auto;
     width: 70%;
     margin-top: 60px;
     margin-bottom: 60px;
-    & * {
+    h2 {
+      letter-spacing: 1px;
+    }
+    * {
       display: block;
       margin-bottom: 40px;
     }
-        & input, & textarea {
-            padding: 15px;
-            border: none;
-            border-bottom: 2px solid var(--silver);
-            transition: 0.3s;
-            &:focus {
-                outline: none;
-                border-bottom: 2px solid $red;
-            }
+    input, textarea {
+      padding: 15px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 2px solid $silver;
+      transition: 0.3s;
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid $red;
         }
-        & input {
-            width: 100%;
+      }
+      input {
+        width: 100%;
+      }
+      textarea {
+        width: 100.2%;
+        font-family: 'Lato', 'Open sans', Calibri, Sans-serif;
+        resize: none;
+      }
+      input[type="submit"] {
+        background: $midnight;
+        border: 1px solid $midnight;
+        color: $white;
+        width: 102.6%;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 17px;
+        &:hover {
+          background: $red;
         }
-        & textarea {
-            width: 100.2%;
-            font-family: 'Lato', 'Open sans', Calibri, Sans-serif;
-            resize: none;
-        }
-        & input[type="submit"] {
-            background: $midnight;
-            border: 1px solid $midnight;
-            color: $white;
-            width: 102.6%;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 17px;
-            &:hover {
-                background: $red;
-            }
-        }
+      }
   }
 }
 
@@ -469,27 +459,28 @@ $test : 20 !default;
 
 #footer {
     position: relative;
-  height: 300px;
-  & .icon-social {
+    height: 300px;
+    .icon-social {
       text-align: center;
-      & h3 {
+      h3 {
         font-size: 25px;
         color: $white;
         padding-top: 50px;
-    }
-    & a {
-            & svg {
-                transition: 0.3s;
-                font-size: 36px;
-            }
-      &:hover {
-        & svg {
-          color: $white;
-                }
+        letter-spacing: 1px;
       }
-            &:not(:last-child) {
-                padding-right: 30px;
-            }
+      a {
+        svg {
+          transition: 0.3s;
+          font-size: 36px;
+        }
+      &:hover {
+        svg {
+          color: $white;
+        }
+      }
+      &:not(:last-child) {
+        padding-right: 30px;
+      }
     }
   }
 }
@@ -504,19 +495,19 @@ $test : 20 !default;
 /* Icons */
 
 a {
-    & svg[data-icon="facebook-f"] {
+    svg[data-icon="facebook-f"] {
         color: #3b5998;
     }
-    & svg[data-icon="twitter"] {
+    svg[data-icon="twitter"] {
         color: #1da1f2;
     }
-    & svg[data-icon="instagram"] {
+    svg[data-icon="instagram"] {
         color: #c13584;
     }
-    & svg[data-icon="linkedin"] {
+    svg[data-icon="linkedin"] {
         color: #0077b5;
     }
-    & svg[data-icon="github"] {
+    svg[data-icon="github"] {
         color: #4078c0;
     }
 }
