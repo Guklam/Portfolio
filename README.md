@@ -2,7 +2,7 @@
 
 ## Constantes
 
-Les constantes pour le titre etc. sont contenus dans le fichier *includes/constantes.php*
+Les constantes pour le titre etc. sont contenus dans le fichier `includes/constantes.php`
 
 ## Ligne de commande pour node-sass
 
