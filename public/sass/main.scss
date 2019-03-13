@@ -94,21 +94,6 @@ body {
  }
 }
 
-/* Animation opacity */
-
-/*$class-slug: 0 !default;
-$test : 20 !default;
-
-@keyframes opacity {
-    @for $i from 1 through 6 {
-      $class-slug = 0;
-      $test = 20;
-        {$class-slug+20}% {
-            opacity: 0,$test;
-        }
-    }
-}*/
-
 @keyframes opacity {
  0% {
   opacity: 0;
@@ -384,7 +369,11 @@ $test : 20 !default;
 /*  Page des travaux
 /* ----------------------------------------------- */
 
+<<<<<<< HEAD:public/sass/main.scss
 #works {
+=======
+#works { 
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
   .grid-wrapper {
     position: relative;
     width: auto;
@@ -396,8 +385,12 @@ $test : 20 !default;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 100px;
+<<<<<<< HEAD:public/sass/main.scss
   }
   .grid-items {
+=======
+      .grid-items {
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
       clear: none;
       text-align: inherit;
       width: 32%;
@@ -405,11 +398,20 @@ $test : 20 !default;
       margin-bottom: 8px;
       display: inline-block;
       img {
+<<<<<<< HEAD:public/sass/main.scss
       width: 100%;
       height: auto;
     }
     &:nth-child(-n+3) {
       margin-top: 100px;
+=======
+        width: 100%;
+        height: auto;
+      }
+      &:nth-child(-n+3) {
+        margin-top: 100px;
+      }
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
     }
   }
 }
@@ -427,10 +429,17 @@ $test : 20 !default;
     width: 70%;
     margin-top: 60px;
     margin-bottom: 60px;
+<<<<<<< HEAD:public/sass/main.scss
+=======
+    h2 {
+      letter-spacing: 1px;
+    }
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
     * {
       display: block;
       margin-bottom: 40px;
     }
+<<<<<<< HEAD:public/sass/main.scss
         input, textarea {
             padding: 15px;
             border-top: none;
@@ -462,7 +471,40 @@ $test : 20 !default;
             &:hover {
                 background: $red;
             }
+=======
+    input, textarea {
+      padding: 15px;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 2px solid $silver;
+      transition: 0.3s;
+        &:focus {
+          outline: none;
+          border-bottom: 2px solid $red;
         }
+      }
+      input {
+        width: 100%;
+      }
+      textarea {
+        width: 100.2%;
+        font-family: 'Lato', 'Open sans', Calibri, Sans-serif;
+        resize: none;
+      }
+      input[type="submit"] {
+        background: $midnight;
+        border: 1px solid $midnight;
+        color: $white;
+        width: 102.6%;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 17px;
+        &:hover {
+          background: $red;
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
+        }
+      }
   }
 }
 
@@ -472,19 +514,34 @@ $test : 20 !default;
 
 #footer {
     position: relative;
+<<<<<<< HEAD:public/sass/main.scss
   height: 300px;
   .icon-social {
+=======
+    height: 300px;
+    .icon-social {
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
       text-align: center;
       h3 {
         font-size: 25px;
         color: $white;
         padding-top: 50px;
+<<<<<<< HEAD:public/sass/main.scss
     }
     a {
             svg {
                 transition: 0.3s;
                 font-size: 36px;
             }
+=======
+        letter-spacing: 1px;
+      }
+      a {
+        svg {
+          transition: 0.3s;
+          font-size: 36px;
+        }
+>>>>>>> 0536396831d4526c991b3a2e84bb65d8ea9c822f:sass/main.scss
       &:hover {
         svg {
           color: $white;

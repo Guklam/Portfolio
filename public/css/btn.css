@@ -1,7 +1,3 @@
-/* For exemple */
-
-@import url(http://guklam.esy.es/BTN/css/design.css);
-
 /* Bouton */
 
 @import url(https://fonts.googleapis.com/css?family=Opensans:400,900,700,500,300,100);
@@ -94,12 +90,11 @@ button[class^="btn"] {
 }
 /**********************
   Couleur au passage
-  de la souris sur
+  de la souris sur 
   les boutons inversÃ©s
 **********************/
 .btno:hover {
   background: white;
-  font-weight
 }
 .btno-default:hover {
   border-color: #7f8c8d;
@@ -124,28 +119,27 @@ button[class^="btn"] {
 /*********************
        Taille
 *********************/
-
-.btn-default {
+.btn-df {
   padding:7px 13px;
 }
-.btn-s {
+.btn-small {
   padding: 4px 8px;
 }
-.btn-xs {
+.btn-vsmall {
   padding: 2px 4px;
   font-size: 13px;
 }
-.btn-xl {
+.btn-large {
   padding: 12px 18px;
   font-size: 16px;
 }
-.btn-xlg {
+.btn-vlarge {
   padding: 18px 24px;
   font-size: 20px;
 }
 .btn-block {
   height: 55px;
   display:block;
-  width: 100%;
+  width: 103%;
   font-size: 19px;
 }
