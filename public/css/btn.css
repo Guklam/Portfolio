@@ -1,0 +1,151 @@
+/* For exemple */
+
+@import url(http://guklam.esy.es/BTN/css/design.css);
+
+/* Bouton */
+
+@import url(https://fonts.googleapis.com/css?family=Opensans:400,900,700,500,300,100);
+
+/*********************
+       Commun
+*********************/
+button[class^="btn"] {
+  display: inline-block;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Open sans', sans-serif;
+  transition:0.3s;
+}
+.btn {
+  padding:7px 13px;
+  background: white;
+  border-width: 2px;
+  border-style: solid;
+}
+.btno {
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent;
+  color:white;
+}
+/*********************
+       Couleur
+*********************/
+.btn-default {
+  border-color: #7f8c8d;
+  color: #7f8c8d;
+}
+.btn-primary {
+  border-color: #2980b9;
+  color: #2980b9;
+}
+.btn-info {
+  border-color: #2ab966;
+  color: #2ab966;
+}
+.btn-warning {
+  border-color: #e67e22;
+  color: #e67e22;
+}
+.btn-danger {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+/*********************
+  Couleur au passage
+  de la souris
+*********************/
+.btn:hover {
+  color:white;
+}
+.btn-default:hover {
+  background: #7f8c8d;
+}
+.btn-primary:hover {
+  background: #2980b9;
+}
+.btn-info:hover {
+  background: #2ab966;
+}
+.btn-warning:hover {
+  background: #e67e22;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+/*********************
+       InversÃ©
+*********************/
+.btno-default {
+  background: #7f8c8d;
+}
+.btno-primary {
+  background: #2980b9;
+}
+.btno-info {
+  background: #2ab966;
+}
+.btno-warning {
+  background: #e67e22;
+}
+.btno-danger {
+  background: #c0392b;
+}
+/**********************
+  Couleur au passage
+  de la souris sur
+  les boutons inversÃ©s
+**********************/
+.btno:hover {
+  background: white;
+  font-weight
+}
+.btno-default:hover {
+  border-color: #7f8c8d;
+  color: #7f8c8d;
+}
+.btno-primary:hover {
+  border-color: #2980b9;
+  color: #2980b9;
+}
+.btno-info:hover {
+  border-color: #2ab966;
+  color: #2ab966;
+}
+.btno-warning:hover {
+  border-color: #e67e22;
+  color: #e67e22;
+}
+.btno-danger:hover {
+  border-color: #c0392b;
+  color: #c0392b;
+}
+/*********************
+       Taille
+*********************/
+
+.btn-default {
+  padding:7px 13px;
+}
+.btn-s {
+  padding: 4px 8px;
+}
+.btn-xs {
+  padding: 2px 4px;
+  font-size: 13px;
+}
+.btn-xl {
+  padding: 12px 18px;
+  font-size: 16px;
+}
+.btn-xlg {
+  padding: 18px 24px;
+  font-size: 20px;
+}
+.btn-block {
+  height: 55px;
+  display:block;
+  width: 100%;
+  font-size: 19px;
+}

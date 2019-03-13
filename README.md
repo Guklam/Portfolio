@@ -2,7 +2,7 @@
 
 ## Documentation
 
-Création d'un portfolio pour le BTS SIO option SLAM
+Création d'un portfolio
 
 ### Ligne de commande pour node-sass
 
